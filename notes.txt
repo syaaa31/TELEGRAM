@@ -15,14 +15,10 @@ Understand the use of Active Low and Active High.
 Know how to trigger output.
 
 THEORY
-In digital electronics, signals can be used to activate (turn on) or deactivate (turn off) a component. The terms active low and active 
-high refer to which logic level (HIGH or LOW) causes the component or circuit to become active (enabled, ON, or triggered).
-
-An active-low LED circuit turns the LED ON when a LOW (0) signal is applied, because current flows from the positive supply through the 
-resistor and LED into the LOW pin, causing it to light up. When a HIGH (1) is given, the voltage difference is too small, so the LED 
-stays OFF. In contrast, an active-high LED circuit turns ON when given a HIGH (1), as current flows from the HIGH pin through the 
-resistor and LED to ground, making the LED light up; it stays OFF when the input is LOW. The resistor in both circuits is used to limit 
-current and protect the LED, with typical values ranging from 150Ω to 2.2kΩ depending on LED type and desired brightness.
+In digital electronics, active-low and active-high describe which logic level turns a component ON.
+Active-low LED: Turns ON with a LOW (0) signal as current flows from Vcc → resistor → LED → LOW pin. With HIGH, the LED stays OFF.
+Active-high LED: Turns ON with a HIGH (1) signal as current flows from the pin → resistor → LED → GND. With LOW, the LED stays OFF.
+In both cases, a resistor (150Ω–2.2kΩ) limits current and protects the LED.
 
 EQUIPMENT
 Trainer Kit, USB cable, LED (Active Low & Active High), Jumper M/M x2
@@ -40,18 +36,11 @@ Understand the use of Active Low and Active High & LDR
 Understand and know how to use pin analog input.
 
 THEORY
-In digital electronics, signals can be used to activate (turn on) or deactivate (turn off) a component. The terms active low and active 
-high refer to which logic level (HIGH or LOW) causes the component or circuit to become active (enabled, ON, or triggered). An active-low 
-LED circuit turns the LED ON when a LOW (0) signal is applied, because current flows from the positive supply through the resistor and 
-LED into the LOW pin, causing it to light up. When a HIGH (1) is given, the voltage difference is too small, so the LED stays OFF. In 
-contrast, an active-high LED circuit turns ON when given a HIGH (1), as current flows from the HIGH pin through the resistor and LED to 
-ground, making the LED light up; it stays OFF when the input is LOW. The resistor in both circuits is used to limit current and protect 
-the LED, with typical values ranging from 150Ω to 2.2kΩ depending on LED type and desired brightness.
-
-It works on the principle of photoconductivity whenever the light falls on its photoconductivematerial, it absorbs its energy and the 
-electrons of that photoconductive material in the valence band get excited and go to the conduction band and thus increasing the 
-conductivity as per the increase in light intensity. Also, the energy in incident light should be greater than the bandgap gap energy so 
-that the electrons from the valence band got excited and go to the conduction band.
+In digital electronics, active-low and active-high define which logic level turns a circuit ON:
+Active-low LED: ON with LOW (0), OFF with HIGH. Current flows Vcc → resistor → LED → LOW pin.
+Active-high LED: ON with HIGH (1), OFF with LOW. Current flows pin → resistor → LED → GND.
+A resistor (150Ω–2.2kΩ) protects the LED by limiting current.
+A light-dependent resistor (LDR) works on photoconductivity. When light hits its material, electrons in the valence band absorb energy and jump to the conduction band, increasing conductivity with light intensity. The light energy must exceed the material’s bandgap for this to happen.
 
 EQUIPMENT
 Trainer Kit, USB cable, LED (Active Low & Active High) & LDR, Jumper M/M x3
@@ -74,16 +63,8 @@ Understand and know how to use pin digital output.
 Understand the use of RGB.
 
 THEORY
-A RGB LED has 3 LEDs integrated into one LED component. It can respectively emit Red, Green and Blue light. In order to do this, it 
-requires 4 pins (this is also how you identify it). The long pin (1) is the common which is the Cathode (+) or positive lead, the other 3 
-are the Anodes (-) or negative leads. A rendering of a RGB LED and its electronic symbol are shown below. We can make RGB LED emit 
-various colors of light and brightness by controlling the 3 Anodes (2, 3 & 4) of the RGB LED.
-
-Red, Green, and Blue light are called 3 Primary Colors when discussing light (Note: for pigments such as paints, the 3 Primary Colors are 
-Red, Blue and Yellow). When you combine these three Primary Colors of light with varied brightness, they can produce almost any color of 
-visible light. Computer screens, single pixels of cell phone screens, neon lamps, etc. can all produce millions of colors due to 
-phenomenon. We know from the previous section that, control board controls LED to emit a total of 256(0-255) different brightness via 
-PWM. So, through different combinations of RGB light brightness, we can create 256^3=16777216(16Million) colours.
+An RGB LED combines three LEDs (Red, Green, Blue) in a single package with 4 pins: one common pin (either anode (+) or cathode (–)) and three control pins for each color. By adjusting the brightness of the red, green, and blue LEDs individually, different colors can be produced.
+Red, Green, and Blue are the primary colors of light. By mixing them at various brightness levels, almost any visible color can be generated. Using PWM control (0–255 brightness levels per channel), an RGB LED can display up to 256³ = 16,777,216 (16 million) colors, the same principle used in TV, computer, and phone screens.
 
 EQUIPMENT
 Trainer Kit, USB cable x1, RGB LED, Jumper M/M x3
@@ -113,13 +94,10 @@ Understand the use of RGB and Potentiometer
 Understand and know how to use pin analog input.
 
 THEORY
-In digital electronics, active-low and active-high describe which logic level turns a component ON. In an active-low LED circuit, the LED lights when the input is LOW (0), as current flows from Vcc through the resistor and LED into the LOW pin; when HIGH (1), it stays OFF. In an active-high circuit, the LED lights when the input is HIGH (1), as current flows to ground; when LOW, it stays OFF. A resistor (150Ω–2.2kΩ) protects the LED by limiting current.
-
-A potentiometer is a variable resistor with three pins: two for power (Vcc, GND) and a middle pin giving variable resistance. By connecting it to an Arduino analog input, you can measure resistance as a variable voltage. This enables uses like adjusting brightness, mixing colors, or smoothly fading LEDs.
-
-Since the Arduino only outputs digital HIGH/LOW, PWM (Pulse Width Modulation) is used to control devices by switching rapidly between ON (5 V) and OFF (0 V). The duty cycle (time ON per cycle) determines brightness or motor speed.
-
-A light-dependent resistor (LDR) works on photoconductivity: when light energy exceeds the material’s bandgap, electrons move from the valence to conduction band, increasing conductivity with light intensity.
+In digital electronics, active-low means a component turns ON at logic LOW (0), while active-high means it turns ON at logic HIGH (1). In LED circuits, current flow and logic determine whether the LED lights, with a resistor (150Ω–2.2kΩ) limiting current.
+A potentiometer is a variable resistor with three pins (Vcc, GND, output). The output gives a variable voltage, which Arduino can read for tasks like brightness control, color mixing, or smooth LED fading.
+Since Arduino outputs only HIGH/LOW, it uses PWM (Pulse Width Modulation) to simulate analog control by rapidly switching ON/OFF. The duty cycle controls brightness or motor speed.
+A light-dependent resistor (LDR) uses photoconductivity: when light exceeds the bandgap energy, electrons jump to the conduction band, lowering resistance as light intensity increases.
 
 Value of Analog
 | Write | Percent ON%  (Duty Cycle) |
@@ -130,7 +108,6 @@ Value of Analog
 
 EQUIPMENT
 Trainer Kit, USB cable x1, Potentiometer & LED (RGB), Jumper M/M x4
-
 PROCEDURE
 Construct the logic circuit, connect the pin11,10,9 to RGB led and pin A0 to signal of potentiometer , the 5v pin is connected to the 
 middle pin
@@ -153,7 +130,6 @@ Understand the use of 74HC595N IC
 
 THEORY
 The 74HC595N is an 8-bit serial-in, parallel-out shift register often used with Arduino to expand output pins. It can be controlled by bit-banging but works best with Arduino’s hardware SPI.
-
 Pin connections:
 DS (Serial Data In): Connect to Arduino MOSI (e.g., D11 on Uno).
 SH_CP (Shift Clock): Connect to Arduino SCK (e.g., D13).
@@ -164,10 +140,8 @@ Q0–Q7 (Outputs): Provide the 8-bit parallel data, often connected to LEDs.
 
 EQUIPMENT
 Trainer Kit, USB cable, LED (SPIO 8 BIT LED), Jumper M/M x3
-
 PROCEDURE
 Construct the logic circuit, connect the pin 9 and 8 to active low andactive high of the LED.
-
 RESULT
 Observation : The LED moves from led 1 to led 8 and loops again.
 
@@ -677,4 +651,5 @@ For the lcd part, connect rs to pin 7, en to pin 6, d4 to pin 5, d5 to pin 4, d6
 Results & Observation     
 The snake moves on the LED matrix controlled by the joystick, while the LCD updates the score each time food is eaten.      
 The LCD shows “Game Over” with the final score, and the LED matrix briefly flashes before resetting.
+
 
