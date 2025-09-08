@@ -221,12 +221,18 @@ Understand and know how to use buzzer as a digital/analog output.
 Can apply buzzer functions in simple alert or notification systems.
 
 THEORY
-A buzzer is an electromechanical or electronic device that converts electrical energy into sound. In digital electronics, a buzzer can be 
-activated by applying a HIGH or LOW signal depending on its type (active or passive). An active buzzer produces sound when a DC voltage 
-is applied, as it has a built-in oscillator, while a passive buzzer requires an external signal to generate sound. In the given circuit, 
-the buzzer is connected to a digital output pin of the microcontroller, and sound is produced when the microcontroller sends a HIGH 
-signal to the buzzer for a set period. The pitch (frequency) and duration of the sound can be controlled in code to create short beeps, 
-long beeps, or patterns of beeps for different indications.
+A buzzer has two pins, namely positive and negative. The positive terminal is represented by the ‘+’ symbol and negative terminal is 
+represented by the ‘-’ symbol just like an led and a capacitor.  
+
+Active Buzzers: Active buzzers are called ‘active’ because they can produce sound directly when connected to a battery. If we connect the 
+positive and negative terminals properly to the battery, It can generate sound by itself because it has a build-in oscillator. Active 
+buzzers are the simplest to use. They are normally available in voltage ranges from 1.5V to 24V. they can produce a sound frequency of 
+about 2kHz±300Hz. The current consumption of an active buzzer is ≤ 25mA.
+Passive Buzzers: A passive buzzer can’t produce sound directly when connected to battery because it does not have an internal oscillating 
+source. A passive buzzer requires an AC voltage signal source in order to make sound. It works like an electromagnetic squeaker, where 
+changing input signal and frequency produces the sound. Therefore, these passive buzzers can produce a number of different tones based on 
+the input frequency of the signal. The internal coil resistance of passive buzzer is very low, 16 ohm so it can draw a higher amount of 
+current around 36mA. For safety, we can also connect 100ohm series resistor.
 
 EQUIPMENT/TOOLS
 Trainer kit, USB cable x1, Buzzer, Jumper M/M x1
@@ -270,13 +276,6 @@ OBJECTIVE
 Understand and know how to use Arduino digital output pins to control a buzzer and digital input pins to read a switch.
 Produce different buzzer sound patterns based on switch input states.
 Apply buzzer and switch combinations in simple alert or interactive systems.
-
-THEORY
-A switch is an electrical component used to open or close a circuit, thereby controlling the flow of current. In this setup, push-button 
-switches are connected to the microcontroller’s digital input pins, with internal pull-up resistors enabled. This means the input pin 
-reads HIGH when the switch is not pressed, and LOW when the switch is pressed (as the circuit is completed to ground). Each switch in the 
-code triggers a different buzzer pattern or tone frequency, allowing the user to generate distinct sounds based on which button is 
-pressed. This method is useful for creating multi-function input control with simple hardware.
 
 EQUIPMENT/TOOLS
 Trainer kit, USB cable x1, Buzzer, Jumper M/M x10
@@ -351,19 +350,6 @@ OBJECTIVE
 2. To implement a buzzer alert system when the object is closer than a set threshold (10 cm).
 3. To observe the effectiveness of using sound as proximity feedback.
 
-THEORY
-The 16×2 Liquid Crystal Display (LCD) is used to show textual information such as the current score, game status, and messages like “Game 
-Over.” It operates with RS, EN, and data pins (D4–D7) connected to the Arduino, allowing communication in 4-bit mode to save I/O pins.
-The LCD enhances the user experience by providing real-time feedback and game information that complements the visual gameplay on the LED 
-matrix.
-
-A buzzer is an audio signaling device commonly used in electronic circuits to provide alerts or notifications. It works on the 
-piezoelectric principle, where a piezoelectric material vibrates to produce sound when voltage is applied. There are two main types: 
-active buzzers, which contain an internal oscillator and can produce sound with direct power, and passive buzzers, which require external 
-signals from a microcontroller to generate tones. Typically, the positive pin of the buzzer is connected to a digital output pin or VCC, 
-while the negative pin is connected to ground. Buzzers are widely used in applications such as alarms, distance measurement systems with 
-ultrasonic sensors, password-protected locks, and warning indicators.
-
 EQUIPMENT / TOOLS
 Trainer Kit, USB cable x1, Ultrasonic Sensor & Buzzer, Jumper M/M x3
 
@@ -387,20 +373,6 @@ OBJECTIVE
 1. To interface an ultrasonic distance sensor with Arduino for measuring object distance.
 2. To control an RGB LED based on distance ranges (close, medium, far).
 3. To observe how sensor readings can be used for real-time visual feedback using colors.
-
-THEORY
-A RGB LED has 3 LEDs integrated into one LED component. It can respectively emit Red,Green and Blue light. In order to do this, it 
-requires 4 pins (this is also how you identify it). The long pin (1) is the common which is the Cathode (+) or positive lead, the other 3 
-are the Anodes (-) or negative leads. A rendering of a RGB LED and its electronic symbol are shown below. We can make RGB LED emit 
-various colors of light and brightness by controlling the 3 Anodes (2, 3 & 4) of the RGB LED.
-
-Red, Green, and Blue light are called 3 Primary Colors when discussing light (Note: for pigments such as paints, the 3 Primary Colors are 
-Red, Blue and Yellow). When you combine these three Primary Colors of light with varied brightness, they can produce almost any color of 
-visible light. Computer screens, single pixels of cell phone screens, neon lamps, etc. can all produce millions of colors due to 
-phenomenon.
-
-We know from the previous section that, control board controls LED to emit a total of 256(0-255) different brightness via PWM. So, 
-through different combinations of RGB light brightness, we can create 256^3=16777216(16Million) colors.
 
 EQUIPMENT / TOOLS
 Trainer Kit, USB cable x1, Ultrasonic Sensor & Rgb Led, Jumper M/M x5
@@ -449,31 +421,6 @@ Understand the use of 7 Segment and buzzer.
 Component List 
 Trainer Kit, USB cable x1 , 7 SEGMENT INPUT, BUZZER, Jumper M/M x8
 
-Component Knowledge
-A single seven-segment display is a simple yet effective electronic component used for visual representation of numeric digits (0-9) in 
-electronic devices. Comprising seven individually illuminated segments arranged in the shape of the number "8," each segment can be 
-independently activated or deactivated to display different digits. The primary objective of a single seven- segment display is to convey 
-numeric information in a clear and compact format, making it widely employed in digital clocks, calculators, temperature displays, and 
-various electronic instruments.
-                                                           
-A typical single seven-segment display has 10 pins. The pins are often labeled as follows: Common Anode (CA) or Common Cathode (CC):
-In a Common Anode display : this pin is connected to the positive voltage (Vcc), and the segments are connected to the ground (GND).
-In a Common Cathode display : this pin is connected to the ground (GND), and the segments are connected to the positive voltage (Vcc).
-DP = Decimal Point.
-
-A buzzer has two pins, namely positive and negative. The positive terminal is represented by the ‘+’ symbol and negative terminal is 
-represented by the ‘-’ symbol just like an led and a capacitor.  
-
-Active Buzzers: Active buzzers are called ‘active’ because they can produce sound directly when connected to a battery. If we connect the 
-positive and negative terminals properly to the battery, It can generate sound by itself because it has a build-in oscillator. Active 
-buzzers are the simplest to use. They are normally available in voltage ranges from 1.5V to 24V. they can produce a sound frequency of 
-about 2kHz±300Hz. The current consumption of an active buzzer is ≤ 25mA.
-Passive Buzzers: A passive buzzer can’t produce sound directly when connected to battery because it does not have an internal oscillating 
-source. A passive buzzer requires an AC voltage signal source in order to make sound. It works like an electromagnetic squeaker, where 
-changing input signal and frequency produces the sound. Therefore, these passive buzzers can produce a number of different tones based on 
-the input frequency of the signal. The internal coil resistance of passive buzzer is very low, 16 ohm so it can draw a higher amount of 
-current around 36mA. For safety, we can also connect 100ohm series resistor.
-
 Results and Discussion
 Discussion : The number changes from 0 to 9 , a beep sound will occur after every number .
 ----------------------------------------------------------------------------------------------------------------------------
@@ -485,18 +432,6 @@ Understand the use of 7 Segment and switches.
 
 Component List 
 Trainer Kit , USB cable x1 , Switches, 7 Segment Input, Jumper M/M x8
-
-Component Knowledge
-A single seven-segment display is a simple yet effective electronic component used for visual representation of numeric digits (0-9) in 
-electronic devices. Comprising seven individually illuminated segments arranged in the shape of the number "8," each segment can be 
-independently activated or deactivated to display different digits. The primary objective of a single seven- segment display is to convey 
-numeric information in a clear and compact format, making it widely employed in digital clocks, calculators, temperature displays, and 
-various electronic instruments.
-                                                            
-A typical single seven-segment display has 10 pins. The pins are often labeled as follows: Common Anode (CA) or Common Cathode (CC):
-In a Common Anode display : this pin is connected to the positive voltage (Vcc), and the segments are connected to the ground (GND).
-In a Common Cathode display : this pin is connected to the ground (GND), and the segments are connected to the positive voltage (Vcc).
-DP = Decimal Point.
 
 Results and Discussion
 Discussion : The number changes from 0 to 9 , if we press the switch buttton will occur after every number .
@@ -510,18 +445,6 @@ To develop a program that counts from 1 to 100 and displays the output on the 7-
 
 Component List 
 Trainer Kit       , USB cable x1 , 7 SEGMENT INPUT, Jumper M/M x8
-
-Component Knowledge
-A single seven-segment display is a simple yet effective electronic component used for visual representation of numeric digits (0-9) in 
-electronic devices. Comprising seven individually illuminated segments arranged in the shape of the number "8," each segment can be 
-independently activated or deactivated to display different digits. The primary objective of a single seven- segment display is to convey 
-numeric information in a clear and compact format, making it widely employed in digital clocks, calculators, temperature displays, and 
-various electronic instruments.		
-                                                          
-A typical single seven-segment display has 10 pins. The pins are often labeled as follows: Common Anode (CA) or Common Cathode (CC):
-In a Common Anode display : this pin is connected to the positive voltage (Vcc), and the segments are connected to the ground (GND).
-In a Common Cathode display : this pin is connected to the ground (GND), and the segments are connected to the positive voltage (Vcc).
-DP = Decimal Point.
 
 Result & Observation
 Observation : 
@@ -599,12 +522,6 @@ To visualize the potentiometer output both numerically and graphically on the 16
 Component List 
 Trainer Kit, USB cable x1 , LCD, POTENTIOMETER, Jumper M/M x8
 
-THEORY
-A potentiometer is a three-terminal variable resistor used to adjust voltage or signal levels. It works by sliding a contact (wiper) over 
-a resistive track, dividing the input voltage into a variable output. In Arduino or microcontroller projects, the middle pin (wiper) is 
-usually connected to an analog input pin to read values ranging from 0 to 1023, depending on the knob position. Potentiometers are 
-commonly used for volume control, brightness adjustment, and sensor calibration.
-
 Circuit Connection
 connect rs to pin 12, en to pin 11, d4 to pin 5, d5 to pin 4, d6 to pin 3, d7 to pin2 and b.l to 5v
 
@@ -643,13 +560,7 @@ To observe the real-time relationship between rotation and servo movement.
 
 Component List 
 Trainer Kit , USB cable x1 , Servo Motor and Potentiometer, Jumper M/M x 4
-
-Component Knowledge
-A servo motor and potentiometer combination is a simple yet effective setup for controlling precise angular movement manually. The 
-potentiometer functions as a variable resistor that changes its output voltage according to the position of its rotating knob. This 
-analog voltage is read by a microcontroller, such as an Arduino, and then mapped to a corresponding servo angle, usually between 0° and 
-180°. By turning the potentiometer, the user can directly control the position of the servo shaft in real time.
-                                                                                                                  
+theory                                                                                                              
 This arrangement provides a clear demonstration of how an analog input device can control an actuator with high precision. It is widely 
 used in applications such as manually adjusting robotic arms, controlling camera angles, operating model mechanisms, and in educational 
 experiments to teach the concepts of input-output device interfacing, signal mapping, and closed-loop control.
@@ -688,16 +599,6 @@ To observe the synchronization between motor movement and LCD status updates in 
 
 Component List 
 Trainer Kit , USB cable x1 , Step motor, Jumper M/M x 11
-
-Component Knowledge
-A stepper motor and LCD combination allows both precise motion control and real-time visual feedback in embedded systems. The stepper 
-motor is an electromechanical device that rotates in discrete steps, enabling accurate positioning without the need for feedback sensors. 
-It operates by energizing multiple coils in a defined sequence, with common models like the 28BYJ-48 requiring 2048 steps for a full 
-revolution. The LCD (Liquid Crystal Display), often in a 16x2 configuration, is an alphanumeric display module used to present messages, 
-data, or system status. It operates by manipulating liquid crystal molecules to block or transmit light, often backlit for visibility. 
-When integrated, the LCD can display the stepper motor’s operating status, such as direction, speed, or current task, while the stepper 
-executes precise movements. This pairing is widely used in CNC machines, 3D printers, automated positioning systems, and educational 
-projects to demonstrate microcontroller control and user interaction.
 
 Results & Observation
 Observation :
@@ -745,13 +646,6 @@ To implement a toggle function where pressing a specific button (e.g., button �
 
 Component List 
 Trainer Kit , USB cable x1 , IR Sensor & Active high LED, Jumper M/M x 2
-
-Component Knowledge
-An active-high LED is an LED configuration where the LED turns ON when the control pin outputs a logic HIGH signal. In this setup, the 
-LED anode is connected to the microcontroller pin (through a current-limiting resistor), and the cathode is connected to ground. When the 
-microcontroller pin goes HIGH, current flows from the pin through the LED to ground, lighting it up. This is the most common way to 
-connect LEDs in Arduino projects since it is simple, intuitive, and easy to control using digitalWrite(HIGH) for ON and digitalWrite(LOW) 
-for OFF.
 
 circuit connection
 connect IR input pin to pin 7 and active high led to pin 10.
@@ -822,11 +716,6 @@ Component List
 Trainer Kit , USB cable x1 , Switch and relay, Jumper M/M x 10
 
 Component Knowledge
-A switch is an electromechanical device used to manually control the flow of electricity by opening or closing a circuit. In 
-microcontroller applications such as Arduino, push button switches are commonly used as digital inputs, where the INPUT_PULLUP 
-configuration keeps the pin normally HIGH and changes it to LOW when pressed. This simple mechanism allows the switch to be used for user 
-input, triggering actions like turning on an LED, activating a relay, or sending a signal to the system.
-
 A relay is an electromagnetic switch that enables a low-power control signal from a microcontroller to operate high-power devices such as 
 lamps, motors, or fans. It consists of a coil and movable contacts; when the coil is energized, a magnetic field pulls the contacts to 
 close or open the circuit. Relays provide electrical isolation between the control circuit and the load, ensuring safety when interfacing 
@@ -900,24 +789,12 @@ PROJECT 10.3 – LED DOT MATRIX (MATRIX + JOYSTICK + LCD)
 
 At the end of the lab student should be able to:
 To design and implement a Snake Game using an 8×8 LED matrix as the visual game interface.
-To use a joystick as an input device for interactive control of the snake’s movement in different directions.
 To integrate an LDR sensor for adjusting the LED matrix brightness based on surrounding light conditions.
 To apply concepts of embedded programming such as random number generation, collision detection, analog input handling, and real-time 
 game control in Arduino.
 
 Component List 
-Trainer Kit 
-USB cable x1 
-Matrix & Joystick                  
-Jumper M/M x 2
-Joystick                    
-Lcd
-
-Component Knowledge
-The 16×2 Liquid Crystal Display (LCD) is used to show textual information such as the current score, game status, and messages like 
-“Game Over.” It operates with RS, EN, and data pins (D4–D7) connected to the Arduino, allowing communication in 4-bit mode to save I/O 
-pins. The LCD enhances the user experience by providing real-time feedback and game information that complements the visual gameplay on 
-the LED matrix.
+Trainer Kit , USB cable x1 , Matrix & Joystick , Jumper M/M x 2, Joystick, Lcd
                                                                                                                                         
 Circuit Connection
 connect data to pin 11, clock to pin 13 and load to pin 10. For the joystick part, connect VRX to pin A0, VRY to pin A1 and SW to pin 2.
@@ -926,4 +803,3 @@ For the lcd part, connect rs to pin 7, en to pin 6, d4 to pin 5, d5 to pin 4, d6
 Results & Observation     
 Observation : The snake moves on the LED matrix controlled by the joystick, while the LCD updates the score each time food is eaten.      
 Observation : The LCD shows “Game Over” with the final score, and the LED matrix briefly flashes before resetting.
-
