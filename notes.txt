@@ -1,3 +1,5 @@
+LINK FOR ALL CODING : https://drive.google.com/drive/folders/1WHL82o8X7H4Ej-l-lNjZkgwAY6mX954c
+__________________________________________________________________________________________________________________________________________
 CHAPTER 1
 ( LED )
 
@@ -924,3 +926,4 @@ For the lcd part, connect rs to pin 7, en to pin 6, d4 to pin 5, d5 to pin 4, d6
 Results & Observation     
 Observation : The snake moves on the LED matrix controlled by the joystick, while the LCD updates the score each time food is eaten.      
 Observation : The LCD shows “Game Over” with the final score, and the LED matrix briefly flashes before resetting.
+
