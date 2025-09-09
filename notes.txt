@@ -4,77 +4,51 @@ CHAPTER 1
 ( LED )
 
 PROJECT 1.1 LED – (ACTIVE LOW & ACTIVE HIGH)
-
-COURSE LEARNING OUTCOMES
-Construct the Arduino circuit , input the coding .
-Demonstrate ability to work in team to complete assigned task during practical work sessions.
-
 OBJECTIVE
 Understand and know how to use pin digital output.
 Understand the use of Active Low and Active High.
 Know how to trigger output.
-
 THEORY
 In digital electronics, active-low and active-high describe which logic level turns a component ON.
 Active-low LED: Turns ON with a LOW (0) signal as current flows from Vcc → resistor → LED → LOW pin. With HIGH, the LED stays OFF.
 Active-high LED: Turns ON with a HIGH (1) signal as current flows from the pin → resistor → LED → GND. With LOW, the LED stays OFF.
 In both cases, a resistor (150Ω–2.2kΩ) limits current and protects the LED.
-
 EQUIPMENT
 Trainer Kit, USB cable, LED (Active Low & Active High), Jumper M/M x2
-
 Construct the logic circuit, connect the pin 9 and 8 to active low and active high of the LED. [connection]
-
 RESULT
 Observation : The led blinks alternatingly.
 
 PROJECT 1.2 LED – (LDR AND LED)
-
 OBJECTIVE
-Understand and know how to use pin digital output.
 Understand the use of Active Low and Active High & LDR
 Understand and know how to use pin analog input.
-
 THEORY
 In digital electronics, active-low and active-high define which logic level turns a circuit ON:
 Active-low LED: ON with LOW (0), OFF with HIGH. Current flows Vcc → resistor → LED → LOW pin.
 Active-high LED: ON with HIGH (1), OFF with LOW. Current flows pin → resistor → LED → GND.
 A resistor (150Ω–2.2kΩ) protects the LED by limiting current.
 A light-dependent resistor (LDR) works on photoconductivity. When light hits its material, electrons in the valence band absorb energy and jump to the conduction band, increasing conductivity with light intensity. The light energy must exceed the material’s bandgap for this to happen.
-
 EQUIPMENT
 Trainer Kit, USB cable, LED (Active Low & Active High) & LDR, Jumper M/M x3
-
-PROCEDURE
 Construct the logic circuit, connect the pin 9 and 8 to active low and active high of the LED.
-
 RESULT
 Threshold < 1000 both led off
 Threshold > 1000 both led on
 
 PROJECT 1.3 LED – (RGB)
-
-COURSE LEARNING OUTCOMES
-Construct the Arduino circuit , input the coding .
-Demonstrate ability to work in team to complete assigned task during practical work sessions.
-
 OBJECTIVE
-Understand and know how to use pin digital output.
 Understand the use of RGB.
 
 THEORY
 An RGB LED combines three LEDs (Red, Green, Blue) in a single package with 4 pins: one common pin (either anode (+) or cathode (–)) and three control pins for each color. By adjusting the brightness of the red, green, and blue LEDs individually, different colors can be produced.
 Red, Green, and Blue are the primary colors of light. By mixing them at various brightness levels, almost any visible color can be generated. Using PWM control (0–255 brightness levels per channel), an RGB LED can display up to 256³ = 16,777,216 (16 million) colors, the same principle used in TV, computer, and phone screens.
-
 EQUIPMENT
 Trainer Kit, USB cable x1, RGB LED, Jumper M/M x3
-
-PROCEDURE
 Construct the logic circuit, connect the pin 11, 10 and 9 to RGB LED.
-
 RESULT
-Observation : The cycle loop is purple ,yellow, blue, white and red.
-              The colour fades from white to red
+The cycle loop is purple ,yellow, blue, white and red.
+The colour fades from white to red
                   1st Cycle Purple 
                   2nd Cycle Purple
                   3rd Cycle Purple
@@ -83,16 +57,11 @@ Observation : The cycle loop is purple ,yellow, blue, white and red.
                   7th Cycle Purple
 
 PROJECT 1.4 LED – (RGB AND POTENTIOMETER)
-
 COURSE LEARNING OUTCOMES
 Construct the Arduino circuit , input the coding .
 Demonstrate ability to work in team to complete assigned task during practical work sessions.
-
 OBJECTIVE
-Understand and know how to use pin digital output.
 Understand the use of RGB and Potentiometer
-Understand and know how to use pin analog input.
-
 THEORY
 In digital electronics, active-low means a component turns ON at logic LOW (0), while active-high means it turns ON at logic HIGH (1). In LED circuits, current flow and logic determine whether the LED lights, with a resistor (150Ω–2.2kΩ) limiting current.
 A potentiometer is a variable resistor with three pins (Vcc, GND, output). The output gives a variable voltage, which Arduino can read for tasks like brightness control, color mixing, or smooth LED fading.
@@ -105,10 +74,8 @@ Value of Analog
 |  127  |          50%              |
 |  255  |         100%              |
 
-
 EQUIPMENT
 Trainer Kit, USB cable x1, Potentiometer & LED (RGB), Jumper M/M x4
-PROCEDURE
 Construct the logic circuit, connect the pin11,10,9 to RGB led and pin A0 to signal of potentiometer , the 5v pin is connected to the 
 middle pin
 
@@ -119,15 +86,9 @@ RESULT
 |     100       |Orange-ish White |             5V            |
 
 PROJECT 1.5 LED – (SPIO 8 BIT )
-
-COURSE LEARNING OUTCOMES
-Construct the Arduino circuit , input the coding .
-Demonstrate ability to work in team to complete assigned task during practical work sessions.
-
 OBJECTIVE
 Understand and know how to use pin digital output.
 Understand the use of 74HC595N IC
-
 THEORY
 The 74HC595N is an 8-bit serial-in, parallel-out shift register often used with Arduino to expand output pins. It can be controlled by bit-banging but works best with Arduino’s hardware SPI.
 Pin connections:
@@ -137,79 +98,48 @@ ST_CP (Latch): Connect to a digital pin (e.g., D10) to transfer data to outputs.
 OE (Output Enable): Tie to GND to always enable, or to a pin for control.
 MR (Master Reset): Tie to VCC for normal use, or to a pin for reset control.
 Q0–Q7 (Outputs): Provide the 8-bit parallel data, often connected to LEDs.
-
 EQUIPMENT
 Trainer Kit, USB cable, LED (SPIO 8 BIT LED), Jumper M/M x3
-PROCEDURE
 Construct the logic circuit, connect the pin 9 and 8 to active low andactive high of the LED.
 RESULT
-Observation : The LED moves from led 1 to led 8 and loops again.
+The LED moves from led 1 to led 8 and loops again.
 
 CHAPTER 2
 
 PROJECT 2.1 Buzzer
-COURSE LEARNING OUTCOMES 
-Construct the Arduino circuit, input the coding.
-Demonstrate ability to work in team to complete assigned task during practical work sessions.
-
 OBJECTIVE
 Understand and know how to use buzzer as a digital/analog output.
 Can apply buzzer functions in simple alert or notification systems.
-
 THEORY
 A buzzer has two pins: + (positive) and - (negative), similar to an LED or capacitor.
-
 Active Buzzers: Have a built-in oscillator, so they make sound when directly powered by a battery. They are simple to use, work in the range of 1.5V–24V, produce about 2kHz ±300Hz, and consume up to 25mA.
-
 Passive Buzzers: Need an external AC signal to produce sound, as they lack an oscillator. They can generate different tones depending on the input frequency. Their coil resistance is about 16Ω, drawing around 36mA, so a 100Ω series resistor is recommended for safety.
-
 EQUIPMENT
 Trainer kit, USB cable, Buzzer, Jumper M/M x1
-
-PROCEDURE
 Construct the logic circuit, connect the pin 9 to input pin buzzer
-
 RESULT
-Observation: The buzzer will beep for 1 second, then stay silent for I second, and repeat forever.
+The buzzer will beep for 1 second, then stay silent for I second, and repeat forever.
 
 PROJECT 2.2 BUZZER – (BUZZER AND RGB LED)
-
-COURSE LEARNING OUTCOMES 
-Construct the Arduino circuit, input the coding.
-Demonstrate ability to work in team to complete assigned task during practical work sessions.
-
 OBJECTIVE
 Understand and know how to use buzzer as a digital/analog output.
 Can apply buzzer functions in simple alert or notification systems.
-
-EQUIPMENT / TOOLS
+EQUIPMENT
 Trainer Kit , USB cable x1, Buzzer, RGB LED, Jumper M/M x4  
-
-PROCEDURE
 Construct the logic circuit, connect the pin 9,10 11 and 2 of the Arduino to red ,green , blue and input signal of the rgb led and buzzer.
-
 RESULT
 When the buzzer beeps 1 time, the RGB LED lights up green.
 When the buzzer beeps 2 times, the RGB LED lights up blue.
 When the buzzer beeps 3 times, the RGB LED lights up red.
 
 PROJECT 2.3 BUZZER – (BUZZER & SWITCH)
-
-COURSE LEARNING OUTCOMES 
-Construct the Arduino circuit, input the coding.
-Demonstrate ability to work in team to complete assigned task during practical work sessions.
-
 OBJECTIVE
 Understand and know how to use Arduino digital output pins to control a buzzer and digital input pins to read a switch.
 Produce different buzzer sound patterns based on switch input states.
 Apply buzzer and switch combinations in simple alert or interactive systems.
-
 EQUIPMENT
-Trainer kit, USB cable, Buzzer, Jumper M/M x10
-
-PROCEDURE
+Trainer kit, USB cable, Buzzer, Jumper M/M x10, switch
 Construct the logic circuit,pin 9 , 5 , 4 , 3 , 2 to sw1,2,3,4 and signal of the buzzer . Connect CS1,2,3,4 to the GND of the Arduino Uno.
-
 RESULT
 Pressing switch 1, buzzer plays a 1kHz tone for 0.1 seconds then stops.
 Pressing switch 2, buzzer plays a 500 Hz tone for 0.5 seconds then stops.
@@ -219,177 +149,119 @@ Pressing switch 4, buzzer emits 2 short 1.5 kHz, each lasting 0.05 seconds, with
 CHAPTER 3 (ULTRASONIC SENSOR)
 
 PROJECT 3.1 – (ULTRASONIC SENSOR)
-
-COURSE LEARNING OUTCOMES
-Construct the Arduino circuit , input the coding .
-Demonstrate ability to work in team to complete assigned task during practical work
-sessions.
-
 OBJECTIVE
 To measure distance using an HC-SR04 ultrasonic sensor and Arduino.
 To display the measured distance values on the Serial Monitor.
 To understand the principle of sound wave reflection (echo time) for distancecalculation.
-
 tHEORY
 The 16×2 LCD displays text such as scores, messages, or “Game Over.” It uses RS, EN, and D4–D7 pins in 4-bit mode to save I/O pins. It improves user experience by giving real-time feedback alongside LED matrix visuals.
-
 An ultrasonic sensor measures distance by emitting ultrasonic waves and detecting their echo. It has a transmitter (piezoelectric crystal) and a receiver. Distance is calculated as: 𝐷=1/2×𝑇×𝐶
 where T = time for echo, C = speed of sound (~343 m/s). For example, if the echo takes 0.025 s, the object is ~4.29 m away.
 Applications: Ultrasonic sensors are widely used in proximity sensing, such as car parking systems, obstacle detection in robots, and liquid level monitoring. Unlike IR sensors, they are less affected by smoke or gas. They are also vital in medical imaging for checking organs, detecting tumors, and prenatal health monitoring.
-
 EQUIPMENT
 Trainer Kit, USB cable, Ultrasonic Sensor, Jumper M/M x2
-
-PROCEDURE
 Construct the logic circuit, connect the pin10 and 9 of the Arduino uno to Trigger and Echo of the Ultrasonic Sensor.
-
 RESULT
-Observation :
 When an object was placed closer to the sensor, the distance value decreased on the Serial Monitor.
 When the object was moved further away, the distance value increased.
 The sensor readings updated every 1 second (1000 ms delay).
 
 PROJECT 3.2 – (ULTRASONIC + BUZZER)
-
-COURSE LEARNING OUTCOMES
-Construct the Arduino circuit , input the coding .
-Demonstrate ability to work in team to complete assigned task during practical work
-sessions.
-
 OBJECTIVE
 To interface an ultrasonic sensor with Arduino for measuring object distance.
 To implement a buzzer alert system when the object is closer than a set threshold (10 cm).
 To observe the effectiveness of using sound as proximity feedback.
-
 EQUIPMENT
 Trainer Kit, USB cable x1, Ultrasonic Sensor & Buzzer, Jumper M/M x3
-
-PROCEDURE
 Construct the logic circuit, connect the pin10 and 9 of the Arduino uno to Trigger and Echo of the Ultrasonic Sensor , connect the pin 3 
 to input signal of buzzer.
-
 RESULT
 When the object was within 10 cm, the buzzer turned ON and gave an audible alert.
 When the object was beyond 10 cm, the buzzer remained OFF.
 The Serial Monitor displayed the distance in cm continuously, confirming accurate detection.
 
 PROJECT 3.3 – ( ULTRASONIC & RGB )
-
-COURSE LEARNING OUTCOMES
-Construct the Arduino circuit , input the coding .
-Demonstrate ability to work in team to complete assigned task during practical work sessions.
-
 OBJECTIVE
 To interface an ultrasonic distance sensor with Arduino for measuring object distance.
 To control an RGB LED based on distance ranges (close, medium, far).
 To observe how sensor readings can be used for real-time visual feedback using colors.
-
 EQUIPMENT
 Trainer Kit, USB cable, Ultrasonic Sensor & Rgb Led, Jumper M/M x5
-
-PROCEDURE
 Construct the logic circuit, connect the pin 9 and 10 to the trigger and echo of the ultrasonic sensor , connect pin 5 ,6 and 7 to the 
 blue , green and red of the rgb led.
-
 RESULT
-When you place an object very near (< 20 cm), the RGB LED starts blinking red quickly, and the serial monitor shows small distance values.
-When you move the object a little farther (between 21 cm and 50 cm), the LED blinks green.
-When the object is placed far away (> 50 cm), the LED blinks blue.
-If no object is detected or sensor reading is invalid (distance = 0), the LED will turn off.
-The blinking is caused by the blinkColor() function, which switches the LED ON and OFF with a 200 ms delay.
+When an object is < 20 cm, the RGB LED blinks red, and the serial monitor shows small distance values. At 21–50 cm, it blinks green; at > 50 cm, it blinks blue. If no object is detected or the reading is invalid (distance = 0), the LED stays off. The blinking comes from the blinkColor() function, which toggles the LED ON/OFF with a 200 ms delay.
 
 CHAPTER 4 : 7 SEGMENT
 PROJECT 4.1 – (SINGLE 7 SEGMENT)
-At the end of the lab student should be able to:
+OBJECTIVE
 Understand and know how to use pin digital output.
 Understand the use of 7 Segment and configure with it.
-
 Component List 
-Trainer Kit , USB cable, 7 SEGMENT INPUT, Jumper M/M x8
-
+Trainer Kit, USB cable, 7 SEGMENT INPUT, Jumper M/M x8
 Component Knowledge
 A seven-segment display shows digits 0–9 using seven LED segments arranged like the number “8.” Activating different segments forms each digit, making it useful in clocks, calculators, thermometers, and instruments.
-
 A typical display has 10 pins and comes in two types:
 Common Anode (CA): Common pin to Vcc, segments light when connected to GND.
 Common Cathode (CC): Common pin to GND, segments light when connected to Vcc.
-
-Result & Observation
+Result
 will display 0 until 9
 
 PROJECT 4.2  – (SINGLE 7 SEGMENT + BUZZER)
-
-At the end of the lab student should be able to:
+OBJECTIVE
 Understand the use of 7 Segment and buzzer.
-
-Component List 
+Component
 Trainer Kit, USB cable, 7 SEGMENT INPUT, BUZZER, Jumper M/M x8
-
-Results and Discussion
-Discussion : The number changes from 0 to 9 , a beep sound will occur after every number .
+Results
+The number changes from 0 to 9 , a beep sound will occur after every number .
 
 PROJECT 4.3  – (SINGLE 7 SEGMENT+SWITCH)
-
-At the end of the lab student should be able to:
+OBJECTIVE
 Understand the use of 7 Segment and switches.
-
-Component List 
+Component
 Trainer Kit , USB cable, Switches, 7 Segment Input, Jumper M/M x8
-
-Results and Discussion
+Results
 The number changes from 0 to 9 , if we press the switch buttton will occur after every number .
 
 PROJECT 4.4  – ( 7 SEGMENT 4 DIGITS )
-
-At the end of the lab student should be able to:
+OBJECTIVE
 To understand the working principle of a 4-digit 7-segment display using Arduino.
 To implement multiplexing technique for displaying numbers across multiple digits.
 To develop a program that counts from 1 to 100 and displays the output on the 7-segment display in real time.
-
-Component List 
+Component
 Trainer Kit, USB cable, 7 SEGMENT INPUT, Jumper M/M x8
-
-Result & Observation
+Result
 The display updated smoothly without flickering due to the continuous call of sevseg.refreshDisplay().
 The counter advanced by 1 digit per second, confirming that the millis() function was used correctly for non-blocking timing.
 Once the counter exceeded 100, it automatically reset to 1, ensuring the display looped consistently.
 
 CHAPTER 5 LCD
-PROJECT 5.1 – (LCD)
 
-At the end of the lab student should be able to:
+PROJECT 5.1 – (LCD)
+OBJECTIVE
 To understand the basic working principle of a 16x2 character LCD.
 To learn how to initialize and control the LCD using a microcontroller.
 To display simple text and numerical data on the LCD screen.
-
-Component List 
-Trainer Kit, USB cable, LCD, Jumper M/M x7
-
-Component Knowledge
+THEORY
 The 16×2 Liquid Crystal Display (LCD) is used to show textual information such as the current score, game status, and messages like “Game 
 Over.” It operates with RS, EN, and data pins (D4–D7) connected to the Arduino, allowing communication in 4-bit mode to save I/O pins. 
 The LCD enhances the user experience by providing real-time feedback and game information that complements the visual gameplay on the LED 
 matrix.
-
-Circuit Connection
-connect rs to pin 12, en to pin 11, d4 to pin 5, d5 to pin 4, d6 to pin 3, d7 to pin2 and b.l to 5v
-                                                                    
-Result & Observation
-Observation : the LCD screen display Hi, Welcome to in first row and KRC ELECTRONIC in second row.
+COMPONENT
+Trainer Kit, USB cable,LCD, Jumper M/M x9
+connect rs to pin 12, en to pin 11, d4 to pin 5, d5 to pin 4, d6 to pin 3, d7 to pin2 and b.l to 5V                                       
+Result
+the LCD screen display Hi, Welcome to in first row and KRC ELECTRONIC in second row.
 
 PROJECT 5.2  – (LCD + GYRO)
-
-At the end of the lab student should be able to:
+OBJECTIVE
 To interface the MPU6050 gyroscope with a microcontroller via the I²C protocol.
 To acquire and process X, Y, and Z axis rotational data from the sensor.
-To display the real-time gyroscope readings on the 16x2 LCD.
-
 Component List 
-Trainer Kit, USB cable x1 , 7 SEGMENT INPUT, BUZZER, Jumper M/M x9
-
-Component Knowledge
+Trainer Kit, USB cable,LCD,GYRO, Jumper M/M x9
+connect rs to pin 12, en to pin 11, d4 to pin 5, d5 to pin 4, d6 to pin 3, d7 to pin2 and b.l to 5v
+THEORY
 A gyroscope measures rotational speed around one or more axes, useful for drones, robots, vehicles, and wearable motion sensors. A common module is the L3GD20H, which works on 3.3V but can use 5V if the breakout board has a regulator.
-
 Pin functions:
 INT: Interrupt output
 AD0: I²C address select
@@ -398,195 +270,137 @@ SCL / SDA: Main I²C clock and data lines to Arduino
 GND: Ground
 VCC: Power supply (3.3V or 5V with regulator)
 The 16×2 LCD displays text like scores, messages, or “Game Over.” It connects via RS, EN, and D4–D7 pins in 4-bit mode to save I/O pins, providing real-time feedback to complement LED matrix visuals.
-
-Circuit Connection
-connect rs to pin 12, en to pin 11, d4 to pin 5, d5 to pin 4, d6 to pin 3, d7 to pin2 and b.l to 5v
-
-Results and Discussion
+Results
 The MPU6050 displayed X = -7, Y = -7, Z = 2 dps on the LCD, indicating the sensor was almost stationary with minor noise 
 variations.
 
 PROJECT 5.3  – (LCD + POTENTIOMETER)
-At the end of the lab student should be able to:
+OBJECTIVE
 To read and convert the potentiometer’s varying voltage into digital values.
 To visualize the potentiometer output both numerically and graphically on the 16x2 LCD.
-
-Component List 
+Component
 Trainer Kit, USB cable, LCD, POTENTIOMETER, Jumper M/M x8
-
-Circuit Connection
 connect rs to pin 12, en to pin 11, d4 to pin 5, d5 to pin 4, d6 to pin 3, d7 to pin2 and b.l to 5v
-
-Results and Discussion
+Results
 The LCD displayed the potentiometer value ranging from 0 to 1023 and a corresponding bar graph, showing that the output 
 increased or decreased smoothly as the knob was rotated.
 
 CHAPTER 6 MOTOR 
 
 PROJECT 6.1 MOTOR (SERVO MOTOR) 
-
-At the end of the lab student should be able to:
+OBJECTIVE
 To program and control the servo motor’s angular position using code.
 To observe and analyze the servo’s precise and repeatable movement
-
-Component List 
+Component
 Trainer Kit , USB cable, Servo Motor, Jumper M/M x 1
-
-Component Knowledge
+theory
 A servo motor is an electromechanical device that rotates its shaft to a specific angle (usually 0°–180°) using PWM signals. It uses a closed-loop control system with internal feedback for precise positioning. Powered at 4.8–6V, servos offer high precision, fast response, and easy microcontroller interfacing. They are commonly used in robotic arms, RC vehicles, camera gimbals, automated locks, and pan-tilt systems.
-
-Results & Observation                                                                       
-Observation : The servo motor will sweep back and forth between 0 degrees and 180 degrees in a continuous loop.
+Results                                                                    
+The servo motor will sweep back and forth between 0 degrees and 180 degrees in a continuous loop.
 
 PROJECT 6.2 MOTOR – (SERVO MOTOR AND POTENTIOMETER)
-
-At the end of the lab student should be able to:
+THEORY
 To control the servo motor’s angle based on the potentiometer’s position.
 To observe the real-time relationship between rotation and servo movement.
-
-Component List 
+Component
 Trainer Kit, USB cable, Servo Motor and Potentiometer, Jumper M/M x 4
 theory                                                                                                              
 This arrangement provides a clear demonstration of how an analog input device can control an actuator with high precision. It is widely 
 used in applications such as manually adjusting robotic arms, controlling camera angles, operating model mechanisms, and in educational 
 experiments to teach the concepts of input-output device interfacing, signal mapping, and closed-loop control.
-
-Results & Observation                                          
+Result                                       
 turning the potentiometer will smoothly change the servo motor’s position between 0 degrees to 180 degrees, with the servo 
 angle directly following the knob’s rotation. 
 
 PROJECT 6.3 MOTOR – (STEP MOTOR)
-
-At the end of the lab student should be able to:
-To interface a stepper motor with Arduino microcontroller.
+OBJECTIVE
 To program the stepper motor for precise rotational control in both directions.
 To observe and analyze the step-by-step motion and speed of the motor.
-
-Component List 
-Trainer Kit , USB cable, Step motor, Jumper M/M x 4
-
-Component Knowledge
-A stepper motor moves in discrete steps, enabling precise control of angle, speed, and position without feedback. It works by energizing coils in sequence, moving the rotor in fixed increments (e.g., 1.8° or 0.9° per step). A common example is the 28BYJ-48, which needs 2048 steps per revolution. Stepper motors are widely used in 3D printers, CNC machines, and positioning systems.
-                                                           
-Results & Observation                                                                                                                     
+Component
+Trainer Kit, USB cable, Step motor, Jumper M/M x 4
+THEORY
+A stepper motor moves in discrete steps, enabling precise control of angle, speed, and position without feedback. It works by energizing coils in sequence, moving the rotor in fixed increments (e.g., 1.8° or 0.9° per step). A common example is the 28BYJ-48, which needs 2048 steps per revolution. Stepper motors are widely used in 3D printers, CNC machines, and positioning systems.                              
+Result                                                                                                                   
 The stepper motor will rotate one full turn clockwise at 15 RPM, pause for 1 second, then rotate one full turn counter 
 clockwise, pause for 1 second, and repeat this motion continuously.
 
 PROJECT 6.4 MOTOR – (STEP MOTOR AND LCD)
-
-At the end of the lab student should be able to:
+OBJECTIVE
 To program the stepper motor for controlled forward and backward rotations while displaying status messages on the LCD.
 To observe the synchronization between motor movement and LCD status updates in real time.
-
-Component List 
-Trainer Kit , USB cable, Step motor, Jumper M/M x 11
-
-Results & Observation
-Observation :
-When powered, the LCD first displays “Stepper Ready!” for 2 seconds.
-The stepper motor rotates one full turn clockwise at 10 RPM while the LCD shows “Moving Forward”.
-After a 1-second pause, the LCD changes to “Moving Backward” and the stepper rotates one full turn counter clockwise. This forward–
-backward cycle repeats continuously, with the LCD updating to indicate the motor’s current direction.
+Component
+Trainer Kit , USB cable, Step motor, Jumper M/M x 11,LCD
+Result
+When powered, the LCD shows “Stepper Ready!” for 2s. The stepper then makes one full turn clockwise at 10 RPM with the LCD showing “Moving Forward”. After a 1s pause, it turns counterclockwise with “Moving Backward” on the LCD. This forward–backward cycle repeats continuously, with the LCD updating the direction.
 
 CHAPTER 7 INFRARED SENSOR
 
 PROJECT 7.1 (INFRARED SENSOR)
-
-At the end of the lab student should be able to:
+OBJECTIVE
 To understand the working principle of an IR sensor in detecting objects or obstacles.
 To learn how to interface an IR sensor with an Arduino for digital input reading.
-Component List 
+Component
 Trainer Kit , USB cable, IR Sensor, Jumper M/M x 1
-
-Component Knowledge
+connect IR input pin to pin 7 and active high led to pin 10.
+THEORY
 An Infrared (IR) sensor detects objects, distance, or surfaces using IR light. It emits IR through an LED and senses reflection with a photodiode or phototransistor, converting changes into electrical signals.
-
 IR sensors come in two types:
 Analog: Output varies with distance.
 Digital: Output is HIGH/LOW depending on detection.
 They usually have 3 pins: VCC (5V), GND, and OUT. In Arduino projects, IR sensors are popular for obstacle detection, line-following robots, proximity sensing, and automation due to their simplicity, low cost, and reliability for short-range use.  
-                                                                                                             
-circuit connection
-connect IR input pin to pin 7 and active high led to pin 10.
-
-Results & Observation                                                               
-When a remote button is pressed, the IR receiver detects the signal and the Arduino Serial Monitor shows a unique HEX code with details like protocol, address, and command. Each button gives a consistent HEX value, while holding it may send repeat codes. If no button is pressed, no output appears. The system works reliably within a few meters when the remote is pointed at the sensor, confirming proper communication.
+Result                                                            
+When a remote button is pressed, the IR receiver sends a unique HEX code (with protocol, address, and command) to the Serial Monitor. Each button always gives the same HEX, while holding may produce repeat codes. If no button is pressed, no output appears. The system works reliably within a few meters, confirming proper communication.
 
 PROJECT 7.2 INFRARED SENSOR – (IR SENSOR AND LED)
-
-At the end of the lab student should be able to:
-interface an IR remote control with Arduino using an IR receiver module.
+OBJECTIVE
+To interface an IR remote control with Arduino using an IR receiver module.
 To implement a toggle function where pressing a specific button (e.g., button “5”) turns an LED ON and OFF alternately.
-
-Component List 
+Component
 Trainer Kit, USB cable, IR Sensor & Active high LED, Jumper M/M x 2
-
-circuit connection
 connect IR input pin to pin 7 and active high led to pin 10.
-
-Results & Observation                                                                                          
+Result                                                                                       
 When we press 5, the LED lights up red.                                         
 When we press 5 again, LED turns OFF.
 
 CHAPTER 8 JOYSTICK
 
 PROJECT 8.1 JOYSTICK
-
-At the end of the lab student should be able to:
-To study the working principle of a joystick as an input device.
+OBJECTIVE
 To read analog values from the joystick using Arduino and convert them into X and Y positions.
 To control external devices (e.g., motor, LED, or servo) based on joystick movement.
-
-Component List 
+Components
 Trainer Kit , USB cable x1 , Servo Motor, Jumper M/M x 3
-
-Component Knowledge
+THEORY
 A joystick is a 2D input device that uses two potentiometers (X and Y axes) to vary resistance, producing analog signals read by a microcontroller like Arduino. Many also include a push button when pressed down, adding a digital input. Joysticks are widely used in gaming, robotics, and control systems for intuitive directional and proportional control.
-
-Results & Observation
+Result
 A joystick outputs two analog values (X and Y, range 0–1023) and one digital signal from its push button. The center rests near 512, with movement causing proportional changes along each axis. This makes it ideal for controlling direction, speed, or actions in Arduino projects.
 
 CHAPTER 9 SWITCHES 
 
 PROJECT 9.1 SWITCH 
-At the end of the lab student should be able to:
+OBJECTIVE
 To understand the working principle of switches as input devices in controlling electronic circuits.
 To learn how to interface multiple switches with an Arduino to control a relay in different modes.
-
-Component List 
+Components
 Trainer Kit , USB cable, Servo Motor,Jumper M/M x 9
-
-Component Knowledge
-A switch controls current by opening or closing a circuit. In Arduino projects, a momentary push button is common—pressed = connected, released = disconnected. Using Arduino’s internal pull-up resistors, the input reads HIGH when not pressed and LOW when pressed, simplifying wiring. Push buttons usually have 4 pins (two pairs linked when pressed). Switches are widely used for inputs, ON/OFF control, resets, and driving external components like relays, making them essential in embedded systems.
-Results & Observation
-
-Observation :
+THEORY
+A switch controls current by opening or closing a circuit. In Arduino, a momentary push button is often used: pressed = LOW, released = HIGH (with internal pull-up). Push buttons usually have 4 pins (two pairs connected when pressed). They are used for inputs, ON/OFF control, resets, and triggering components like relays, making them essential in embedded systems.
+Result
 When you press Switch 1, Serial monitor shows “Switch 1 pressed”.
 When you press Switch 2, Serial monitor shows “Switch 2 pressed”.
 When you press Switch 3, Serial monitor shows “Switch 3 pressed”.
 When you press Switch 4, Serial monitor shows “Switch 4 pressed”.
 
 PROJECT 9.2 SWITCHES – (SWITCH AND RELAY)
-
-At the end of the lab student should be able to:
+OBJECTIVE
 To detect the press of switches using Arduino digital input pins.
-To display the switch status on the Serial Monitor.
 To control external devices (relay/LED) based on switch input.
-
-Component List 
-Trainer Kit , USB cable x1 , Switch and relay, Jumper M/M x 10
-
-Component Knowledge
-A relay is an electromagnetic switch that enables a low-power control signal from a microcontroller to operate high-power devices such as 
-lamps, motors, or fans. It consists of a coil and movable contacts; when the coil is energized, a magnetic field pulls the contacts to 
-close or open the circuit. Relays provide electrical isolation between the control circuit and the load, ensuring safety when interfacing 
-low-voltage electronics with higher voltage appliances.
-
-Circuit Connection
+Components
+Trainer Kit , USB cable, Switch and relay, Jumper M/M x 10
 connect cs1 till cs4 to ground and connect sw1 to pin 2, sw2 to pin3, sw3 to pin 4, sw4 to pin 5.
-            
-Results & Observation                                            
-Observation : 
+THEORY
+A relay is an electromagnetic switch that lets a low-power signal from a microcontroller control high-power devices like lamps, motors, or fans. It has a coil and contacts; when energized, the coil’s magnetic field moves the contacts to open/close the circuit. Relays provide electrical isolation between control and load, making them safe for interfacing low-voltage electronics with high-voltage appliances.           
+Result                                      
 when switch 1 pressed, relay turns ON and stays ON.
 When switch 2 pressed, rely turns OFF and stays OFF.
 when switch 3 pressed, if relay was ON then it turns relay  OFF.
@@ -596,60 +410,38 @@ when switch 4 pressed, if relay turns ON  for 1 second then it turns relay  OFF
 CHAPTER 10 LED DOT MATRIK
 
 PROJECT 10.1 (LED DOT MATRIX)
-
-Component List 
+Components
 Trainer Kit, USB cable, Led dot matrix, Jumper M/M x 1
-
-Component Knowledge
+connect data to pin 11, clock to pin 13 and load to pin 10 
+THEORY
 The 8×8 LED matrix, controlled by the MAX7219 driver, is used as the display for the snake game. It lights up LEDs in rows and columns 
 to represent the snake’s body and the food location. The MAX7219 simplifies control by using only three pins (DIN, CS, CLK) from the 
 Arduino, making it efficient to manage all 64 LEDs. This allows smooth and clear visualization of the snake’s movement and game 
-progress. (Download library LedControl) 
-                                                                                                             
-Circuit Connection
-connect data to pin 11, clock to pin 13 and load to pin 10     
-                                                                    
-Results & Observation                                                              
+progress. (Download library LedControl)                                                                     
+Result                                                             
 LED at row 3, column 3(rows 0–7) turns ON.
 
 PROJECT 10.2 – LED DOT MATRIX (MATRIX AND JOYSTICK)
-
-At the end of the lab student should be able to:
+THEORY
 To design and implement a Snake Game using an 8×8 LED matrix as the display.
-To use a joystick as an interactive input device for controlling the snake’s movement.
 To apply concepts of embedded programming such as random number generation, collision detection, and real-time control in Arduino.
-
-Component List 
-Trainer Kit , USB cable x1 , Matrix & Joystick, Jumper M/M x 2
-
-Component Knowledge
-The joystick module is an input device that works using two potentiometers placed at right angles, allowing movement detection along the 
-X-axis (left–right) and Y-axis (up–down). By reading the analog values from these potentiometers, the Arduino can determine the 
-direction of movement to control the snake in the game. The joystick also has a built-in push button (SW), which can be used for 
-additional functions such as pausing or resetting the game.
-                                                                                                                                         
-Circuit Connection
+Components
+Trainer Kit , USB cable, Matrix & Joystick, Jumper M/M x 6
 connect data to pin 11, clock to pin 13 and load to pin 10. For the joystick part, connect VRX to pin A0, VRY to pin A1 and SW to pin 2.
-                                                                                                                                  
-Results & Observation     
+THEORY
+The joystick module is an input device with two potentiometers arranged at right angles to detect movement along the X-axis (left–right) and Y-axis (up–down). Arduino reads their analog values to determine movement direction, such as controlling the snake in a game. It also includes a push button (SW) for extra functions like pause or reset. 
+Result
 The program creates a Snake Game on an 8×8 LED matrix, controlled by a joystick. At startup, the snake (length 3 pixels) appears at the center, and a food pixel is placed randomly. Moving the joystick changes the snake’s direction. Eating food increases its length and spawns new food. If the snake hits the border or itself, the game ends: the matrix briefly lights row by row as a “Game Over” effect, then restarts with the snake reset. This shows how joystick inputs enable real-time control, while logic handles movement, collision, and restart in embedded systems.
 
 PROJECT 10.3 – LED DOT MATRIX (MATRIX + JOYSTICK + LCD)
-
-At the end of the lab student should be able to:
+OBJECTIVE
 To design and implement a Snake Game using an 8×8 LED matrix as the visual game interface.
 To apply concepts of embedded programming such as random number generation, collision detection, analog input handling, and real-time 
 game control in Arduino.
-
-Component List 
-Trainer Kit, USB cable, Matrix & Joystick, Jumper M/M x 2, Joystick, Lcd
-                                                                                                                                        
-Circuit Connection
+Components
+Trainer Kit, USB cable, Matrix & Joystick, Jumper M/M x 13, Joystick, Lcd
 connect data to pin 11, clock to pin 13 and load to pin 10. For the joystick part, connect VRX to pin A0, VRY to pin A1 and SW to pin 2.
-For the lcd part, connect rs to pin 7, en to pin 6, d4 to pin 5, d5 to pin 4, d6 to pin 3, d7 to pin 2 and B.L to 5v 
-                                                                         
-Results & Observation     
+For the lcd part, connect rs to pin 7, en to pin 6, d4 to pin 5, d5 to pin 4, d6 to pin 3, d7 to pin 2 and B.L to 5v.
+Result
 The snake moves on the LED matrix controlled by the joystick, while the LCD updates the score each time food is eaten.      
 The LCD shows “Game Over” with the final score, and the LED matrix briefly flashes before resetting.
-
-
