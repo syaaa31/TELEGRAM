@@ -4,8 +4,6 @@ CHAPTER 1
 ( LED )
 
 PROJECT 1.1 LED – (ACTIVE LOW & ACTIVE HIGH)
-OBJECTIVE
-Understand the use of Active Low and Active High.
 THEORY
 In digital electronics, active-low and active-high describe which logic level turns a component ON.
 Active-low LED: Turns ON with a LOW (0) signal as current flows from Vcc → resistor → LED → LOW pin. With HIGH, the LED stays OFF.
@@ -18,8 +16,6 @@ RESULT
 Observation : The led blinks alternatingly.
 
 PROJECT 1.2 LED – (LDR AND LED)
-OBJECTIVE
-Understand the use of Active Low and Active High & LDR
 THEORY
 In digital electronics, active-low and active-high define which logic level turns a circuit ON:
 Active-low LED: ON with LOW (0), OFF with HIGH. Current flows Vcc → resistor → LED → LOW pin.
@@ -71,8 +67,6 @@ RESULT
 |     100       |Orange-ish White |            5V             |
 
 PROJECT 1.5 LED – (SPIO 8 BIT )
-OBJECTIVE
-Understand the use of 74HC595N IC
 THEORY
 The 74HC595N is an 8-bit serial-in, parallel-out shift register often used with Arduino to expand output pins. It can be controlled by bit-banging but works best with Arduino’s hardware SPI.
 Pin connections:
@@ -90,8 +84,6 @@ The LED moves from led 1 to led 8 and loops again.
 
 CHAPTER 2
 PROJECT 2.1 Buzzer
-OBJECTIVE
-Can apply buzzer functions in simple alert or notification systems.
 THEORY
 A buzzer has two pins: + (positive) and - (negative), similar to an LED or capacitor.
 Active Buzzers: Have a built-in oscillator, so they make sound when directly powered by a battery. They are simple to use, work in the range of 1.5V–24V, produce about 2kHz ±300Hz, and consume up to 25mA.
@@ -103,8 +95,6 @@ RESULT
 The buzzer will beep for 1 second, then stay silent for I second, and repeat forever.
 
 PROJECT 2.2 BUZZER – (BUZZER AND RGB LED)
-OBJECTIVE
-Can apply buzzer functions in simple alert or notification systems.
 EQUIPMENT
 Trainer Kit , USB cable x1, Buzzer, RGB LED, Jumper M/M x4  
 Construct the logic circuit, connect the pin 9,10 11 and 2 of the Arduino to red ,green , blue and input signal of the rgb led and buzzer.
@@ -114,9 +104,6 @@ When it beeps twice, the LED turns blue.
 When it beeps three times, the LED turns red.
 
 PROJECT 2.3 BUZZER – (BUZZER & SWITCH)
-OBJECTIVE
-Produce different buzzer sound patterns based on switch input states.
-Apply buzzer and switch combinations in simple alert or interactive systems.
 EQUIPMENT
 Trainer kit, USB cable, Buzzer, Jumper M/M x10, switch
 Construct the logic circuit,pin 9 , 5 , 4 , 3 , 2 to sw1,2,3,4 and signal of the buzzer . Connect CS1,2,3,4 to the GND of the Arduino Uno.
@@ -146,9 +133,6 @@ Farther object → Distance value on Serial Monitor increases.
 Update rate → Readings refresh every 1 second (1000 ms delay).
 
 PROJECT 3.2 – (ULTRASONIC + BUZZER)
-OBJECTIVE
-To implement a buzzer alert system when the object is closer than a set threshold (10 cm).
-To observe the effectiveness of using sound as proximity feedback.
 EQUIPMENT
 Trainer Kit, USB cable, Ultrasonic Sensor & Buzzer, Jumper M/M x3
 Construct the logic circuit, connect the pin10 and 9 of the Arduino uno to Trigger and Echo of the Ultrasonic Sensor , connect the pin 3 
@@ -159,9 +143,6 @@ Object > 10 cm → Buzzer remains OFF.
 Serial Monitor → Continuously shows distance in cm, confirming detection accuracy.
 
 PROJECT 3.3 – ( ULTRASONIC & RGB )
-OBJECTIVE
-To control an RGB LED based on distance ranges (close, medium, far).
-To observe how sensor readings can be used for real-time visual feedback using colors.
 EQUIPMENT
 Trainer Kit, USB cable, Ultrasonic Sensor & Rgb Led, Jumper M/M x5
 Construct the logic circuit, connect the pin 9 and 10 to the trigger and echo of the ultrasonic sensor , connect pin 5 ,6 and 7 to the 
@@ -184,8 +165,6 @@ Result
 will display 0 until 9
 
 PROJECT 4.2  – (SINGLE 7 SEGMENT + BUZZER)
-OBJECTIVE
-Understand the use of 7 Segment and buzzer.
 Component
 Trainer Kit, USB cable, 7 SEGMENT INPUT, BUZZER, Jumper M/M x8
 Results
@@ -198,8 +177,6 @@ Results
 The number changes from 0 to 9 , if we press the switch buttton will occur after every number .
 
 PROJECT 4.4  – ( 7 SEGMENT 4 DIGITS )
-OBJECTIVE
-To develop a program that counts from 1 to 100 and displays the output on the 7-segment display in real time.
 Component
 Trainer Kit, USB cable, 7 SEGMENT INPUT, Jumper M/M x8
 Result
@@ -208,7 +185,6 @@ Counter update → Increased +1 digit per second using millis() for non-blocking
 Auto reset → After reaching 100, the counter reset to 1, ensuring a smooth continuous loop.
 
 CHAPTER 5 LCD
-
 PROJECT 5.1 – (LCD)
 OBJECTIVE
 To display simple text and numerical data on the LCD screen.
@@ -224,8 +200,6 @@ Result
 the LCD screen display Hi, Welcome to in first row and KRC ELECTRONIC in second row.
 
 PROJECT 5.2  – (LCD + GYRO)
-OBJECTIVE
-To interface the MPU6050 gyroscope with a microcontroller via the I²C protocol.
 Component List 
 Trainer Kit, USB cable,LCD,GYRO, Jumper M/M x9
 connect rs to pin 12, en to pin 11, d4 to pin 5, d5 to pin 4, d6 to pin 3, d7 to pin2 and b.l to 5v
@@ -244,8 +218,6 @@ The MPU6050 displayed X = -7, Y = -7, Z = 2 dps on the LCD, indicating the senso
 variations.
 
 PROJECT 5.3  – (LCD + POTENTIOMETER)
-OBJECTIVE
-To read and convert the potentiometer’s varying voltage into digital values.
 Component
 Trainer Kit, USB cable, LCD, POTENTIOMETER, Jumper M/M x8
 connect rs to pin 12, en to pin 11, d4 to pin 5, d5 to pin 4, d6 to pin 3, d7 to pin2 and b.l to 5v
@@ -254,7 +226,6 @@ The LCD displayed the potentiometer value ranging from 0 to 1023 and a correspon
 increased or decreased smoothly as the knob was rotated.
 
 CHAPTER 6 MOTOR 
-
 PROJECT 6.1 MOTOR (SERVO MOTOR) 
 OBJECTIVE
 To program and control the servo motor’s angular position using code.
@@ -279,8 +250,6 @@ turning the potentiometer will smoothly change the servo motor’s position betw
 angle directly following the knob’s rotation. 
 
 PROJECT 6.3 MOTOR – (STEP MOTOR)
-OBJECTIVE
-To program the stepper motor for precise rotational control in both directions.
 Component
 Trainer Kit, USB cable, Step motor, Jumper M/M x 4
 THEORY
@@ -289,15 +258,12 @@ Result
 Rotate clockwise → 1 full turn at 15 RPM, Pause → 1 second, Rotate counterclockwise → 1 full turn, Pause → 1 second, Repeat continuously
 
 PROJECT 6.4 MOTOR – (STEP MOTOR AND LCD)
-OBJECTIVE
-To program the stepper motor for controlled forward and backward rotations while displaying status messages on the LCD.
 Component
 Trainer Kit , USB cable, Step motor, Jumper M/M x 11,LCD
 Result
 When powered, the LCD shows “Stepper Ready!” for 2s. The stepper then makes one full turn clockwise at 10 RPM with the LCD showing “Moving Forward”. After a 1s pause, it turns counterclockwise with “Moving Backward” on the LCD. This forward–backward cycle repeats continuously, with the LCD updating the direction.
 
 CHAPTER 7 INFRARED SENSOR
-
 PROJECT 7.1 (INFRARED SENSOR)
 OBJECTIVE
 To understand the working principle of an IR sensor in detecting objects or obstacles.
@@ -314,9 +280,6 @@ Result
 When a remote button is pressed, the IR receiver sends a unique HEX code (with protocol, address, and command) to the Serial Monitor. Each button always gives the same HEX, while holding may produce repeat codes. If no button is pressed, no output appears. The system works reliably within a few meters, confirming proper communication.
 
 PROJECT 7.2 INFRARED SENSOR – (IR SENSOR AND LED)
-OBJECTIVE
-To interface an IR remote control with Arduino using an IR receiver module.
-To implement a toggle function where pressing a specific button (e.g., button “5”) turns an LED ON and OFF alternately.
 Component
 Trainer Kit, USB cable, IR Sensor & Active high LED, Jumper M/M x 2
 connect IR input pin to pin 7 and active high led to pin 10.
@@ -353,8 +316,6 @@ Switch 3 → Serial Monitor: "Switch 3 pressed"
 Switch 4 → Serial Monitor: "Switch 4 pressed"
 
 PROJECT 9.2 SWITCHES – (SWITCH AND RELAY)
-OBJECTIVE
-To control external devices (relay/LED) based on switch input.
 Components
 Trainer Kit , USB cable, Switch and relay, Jumper M/M x 10
 connect cs1 till cs4 to ground and connect sw1 to pin 2, sw2 to pin3, sw3 to pin 4, sw4 to pin 5.
@@ -382,7 +343,6 @@ LED at row 3, column 3(rows 0–7) turns ON.
 
 PROJECT 10.2 – LED DOT MATRIX (MATRIX AND JOYSTICK)
 THEORY
-To design and implement a Snake Game using an 8×8 LED matrix as the display.
 To apply concepts of embedded programming such as random number generation, collision detection, and real-time control in Arduino.
 Components
 Trainer Kit , USB cable, Matrix & Joystick, Jumper M/M x 6
@@ -397,9 +357,6 @@ Collision: Hitting border or itself → “Game Over” effect (matrix lights ro
 Purpose: Demonstrates real-time joystick control, movement logic, collision detection, and restart in embedded systems
 
 PROJECT 10.3 – LED DOT MATRIX (MATRIX + JOYSTICK + LCD)
-OBJECTIVE
-To apply concepts of embedded programming such as random number generation, collision detection, analog input handling, and real-time 
-game control in Arduino.
 Components
 Trainer Kit, USB cable, Matrix & Joystick, Jumper M/M x 13, Joystick, Lcd
 connect data to pin 11, clock to pin 13 and load to pin 10. For the joystick part, connect VRX to pin A0, VRY to pin A1 and SW to pin 2.
